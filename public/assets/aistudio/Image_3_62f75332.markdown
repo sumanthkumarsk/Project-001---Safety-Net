@@ -1,0 +1,217 @@
+---
+name: Bengaluru Industrial Trust & Safety
+colors:
+  surface: '#f8f9ff'
+  surface-dim: '#cbdbf5'
+  surface-bright: '#f8f9ff'
+  surface-container-lowest: '#ffffff'
+  surface-container-low: '#eff4ff'
+  surface-container: '#e5eeff'
+  surface-container-high: '#dce9ff'
+  surface-container-highest: '#d3e4fe'
+  on-surface: '#0b1c30'
+  on-surface-variant: '#45464d'
+  inverse-surface: '#213145'
+  inverse-on-surface: '#eaf1ff'
+  outline: '#76777d'
+  outline-variant: '#c6c6cd'
+  surface-tint: '#565e74'
+  primary: '#000000'
+  on-primary: '#ffffff'
+  primary-container: '#131b2e'
+  on-primary-container: '#7c839b'
+  inverse-primary: '#bec6e0'
+  secondary: '#006d2f'
+  on-secondary: '#ffffff'
+  secondary-container: '#5dfd8a'
+  on-secondary-container: '#007232'
+  tertiary: '#000000'
+  on-tertiary: '#ffffff'
+  tertiary-container: '#001e2c'
+  on-tertiary-container: '#008ebf'
+  error: '#ba1a1a'
+  on-error: '#ffffff'
+  error-container: '#ffdad6'
+  on-error-container: '#93000a'
+  primary-fixed: '#dae2fd'
+  primary-fixed-dim: '#bec6e0'
+  on-primary-fixed: '#131b2e'
+  on-primary-fixed-variant: '#3f465c'
+  secondary-fixed: '#66ff8e'
+  secondary-fixed-dim: '#3de273'
+  on-secondary-fixed: '#002109'
+  on-secondary-fixed-variant: '#005322'
+  tertiary-fixed: '#c4e7ff'
+  tertiary-fixed-dim: '#7bd0ff'
+  on-tertiary-fixed: '#001e2c'
+  on-tertiary-fixed-variant: '#004c69'
+  background: '#f8f9ff'
+  on-background: '#0b1c30'
+  surface-variant: '#d3e4fe'
+typography:
+  display:
+    fontFamily: Inter
+    fontSize: 48px
+    fontWeight: '800'
+    lineHeight: 56px
+    letterSpacing: -0.02em
+  display-mobile:
+    fontFamily: Inter
+    fontSize: 32px
+    fontWeight: '800'
+    lineHeight: 40px
+    letterSpacing: -0.015em
+  headline-lg:
+    fontFamily: Inter
+    fontSize: 36px
+    fontWeight: '700'
+    lineHeight: 44px
+    letterSpacing: -0.015em
+  headline-lg-mobile:
+    fontFamily: Inter
+    fontSize: 26px
+    fontWeight: '700'
+    lineHeight: 34px
+    letterSpacing: -0.01em
+  headline-md:
+    fontFamily: Inter
+    fontSize: 24px
+    fontWeight: '600'
+    lineHeight: 32px
+    letterSpacing: -0.01em
+  headline-sm:
+    fontFamily: Inter
+    fontSize: 20px
+    fontWeight: '600'
+    lineHeight: 28px
+  body-lg:
+    fontFamily: Inter
+    fontSize: 18px
+    fontWeight: '400'
+    lineHeight: 28px
+  body-md:
+    fontFamily: Inter
+    fontSize: 15px
+    fontWeight: '400'
+    lineHeight: 24px
+  body-sm:
+    fontFamily: Inter
+    fontSize: 13px
+    fontWeight: '400'
+    lineHeight: 20px
+  label-lg:
+    fontFamily: Inter
+    fontSize: 14px
+    fontWeight: '600'
+    lineHeight: 20px
+    letterSpacing: 0.02em
+  label-md:
+    fontFamily: Inter
+    fontSize: 12px
+    fontWeight: '600'
+    lineHeight: 16px
+    letterSpacing: 0.04em
+  label-sm:
+    fontFamily: Inter
+    fontSize: 11px
+    fontWeight: '700'
+    lineHeight: 14px
+    letterSpacing: 0.06em
+rounded:
+  sm: 0.25rem
+  DEFAULT: 0.5rem
+  md: 0.75rem
+  lg: 1rem
+  xl: 1.5rem
+  full: 9999px
+spacing:
+  gutter: 1.5rem
+  gutter-mobile: 1rem
+  margin: 2rem
+  margin-mobile: 1rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 1rem
+  space-lg: 1.5rem
+  space-xl: 2.5rem
+---
+
+## Brand & Style
+
+The design system is engineered for local trust, swift conversion, and engineering credibility within the Indian urban residential context. Designed specifically for high-rise apartment owners, gated community tenants, and commercial property managers in Bengaluru (spanning Whitefield, Electronic City, Sarjapur, Indiranagar, and Hebbal), the system must reject generic corporate tropes in favor of tangible craftsmanship and institutional safety.
+
+### Aesthetic Persona & Direction
+- **Tactile Reliability Meets Urban Modernism:** Balances structural engineering precision (cables, tensile ratings, invisible grill aesthetics) with neighborhood warmth.
+- **Conversion-First Pragmatism:** Zero friction to initial contact. Instant visual indicators for immediate quotes via WhatsApp, live phone dispatch, same-day site inspections, and clear technical specifications (Garware nylon, 316-grade stainless steel cables).
+- **Hyper-Local Provenance:** Micro-copy, badge mechanics, and service proof points emphasize authentic Bengaluru municipal verification, localized apartment society testimonials, and tangible ISO certification badges without visual clutter.
+
+## Colors
+
+The color palette centers on a dual-personality structure: a disciplined corporate navy foundation paired with the ubiquitous high-trust WhatsApp green for conversational commerce, accented with electric sky cyan for engineering highlights.
+
+### Token Architecture
+- **Primary Navy (`#0F172A`):** The structural core. Commands authority, used for hero headers, primary buttons, high-impact cards, and core navigational surfaces in light mode.
+- **Conversion Emerald (`#25D366`):** Reserved strictly for WhatsApp triggers, instant quote actions, and real-time response counters. Represents immediate availability and authentic customer service.
+- **Precision Sky (`#38BDF8`):** Represents structural lightness and modern architectural finishes (such as invisible grills). Used for interactive indicators, feature highlights, and dark-mode active accents.
+- **Neutral Slate Slate (`#64748B`):** Provides soft structural scaffolding, balanced body hierarchy, and subtle framing.
+
+### Theme Modes
+- **Light Mode (Default):** Canvas sits at pure white (`#FFFFFF`) with surface elevations shifting to clean zinc/slate whites (`#F8FAFC`). Text levels are strictly tiered using deep navy slate (`#0F172A` and `#334155`).
+- **Dark Mode:** Surface foundation drops to true engineered dark (`#121212`), with card and modal layers lifting to elevated industrial charcoal (`#1E1E1E` and `#27272A`). Borders leverage low-opacity slate (`rgba(255, 255, 255, 0.08)`), while sky cyan (`#38BDF8`) takes prominence for active micro-interactions.
+
+## Typography
+
+The type hierarchy relies entirely on `Inter` to deliver an uncompromising, high-density, legible utilitarian structure that thrives across both mobile screens in direct sunlight and wide desktop viewports.
+
+### Typesetting Rules
+- **Display & Large Headlines:** Tight negative tracking (`-0.02em` to `-0.015em`) creates compact, authoritative headlines suitable for technical guarantees and high-impact assurances (e.g., "5-Year Garware Warranty").
+- **Numbers & Metrics:** Tabular numerals enabled for specification tables (net diameter, breaking load, pricing per square foot) ensuring quick visual parsing.
+- **Labels & Micro-Tags:** High-contrast uppercase tracking on certifications (`ISO 9001:2015`, `GRADE 316 S.S.`) to establish engineering legitimacy.
+
+## Layout & Spacing
+
+A 12-column dynamic grid anchors desktop layouts with a maximum container boundary of `1200px` to maintain focused line lengths and balanced scan paths.
+
+### Form Factor Behavior
+- **Mobile (< 768px):** Drops to a 4-column layout with `1rem` (16px) margins and gutters. Crucial conversion anchors (Direct Call and WhatsApp buttons) stick permanently to the bottom viewport bar with strict safe-area-inset accommodation.
+- **Tablet (768px - 1024px):** Uses an 8-column layout with `1.5rem` (24px) gutters, splitting technical product breakdowns and review feeds into equal split tiles.
+- **Desktop (> 1024px):** Strict 12-column layout. Main conversion forms dock alongside service portfolios and certification badge strips, eliminating unnecessary vertical scroll depth.
+
+## Elevation & Depth
+
+Visual hierarchy uses crisp architectural containment rather than decorative blur. Surfaces communicate physical stability.
+
+### Elevation Levels
+- **Level 0 (Flat Canvas):** The base background layer (`#FFFFFF` in light mode, `#121212` in dark mode).
+- **Level 1 (Card & Module Foundation):** Elevated surfaces (`#F8FAFC` light / `#1E1E1E` dark) paired with a razor-thin structural stroke: `1px solid rgba(15, 23, 42, 0.08)` in light mode, and `1px solid rgba(255, 255, 255, 0.08)` in dark mode.
+- **Level 2 (Interactive Floating Elements):** Trust chips, sticky quote bars, and testimonial cards use calibrated ambient drop: `0px 4px 16px -2px rgba(15, 23, 42, 0.06), 0px 2px 6px -1px rgba(15, 23, 42, 0.04)`.
+- **Level 3 (Overlays & Direct Dispatches):** Modals, floating WhatsApp anchors, and sticky header bars leverage high-density ambient diffusion: `0px 12px 32px -4px rgba(15, 23, 42, 0.12)`.
+
+## Shapes
+
+The geometric signature uses strict, understated curvature to reflect industrial assembly and safety hardware. 
+
+- **Base Radius (8px / `0.5rem`):** Standard for buttons, inputs, specification tiles, trust badges, and verified customer review cards.
+- **Small Radius (4px / `0.25rem`):** Applied to technical chips, table tags, and specification indicators.
+- **Outer Shell Radius (12px to 16px):** Reserved solely for major layout modules such as hero cards, pricing calculators, and interactive before-and-after installation galleries.
+- **Circular (Pill):** Strictly limited to active status indicator dots, Google Star badges, and the primary mobile WhatsApp CTA button.
+
+## Components
+
+### Buttons
+- **Primary WhatsApp Conversion:** Solid `#25D366` surface with crisp white bold Inter label and an authentic WhatsApp icon. Active state applies an inner shadow with 2% brightness reduction.
+- **Immediate Phone Dispatch:** Solid `#0F172A` in light mode (Slate `#F8FAFC` text) with a phone receiver icon. In dark mode, adapts to pure white with `#121212` text for instant legibility.
+- **Secondary / Technical Request:** Outlined 1px solid border (`#CBD5E1` in light, `#334155` in dark), neutral text, elevating slightly on hover.
+
+### Trust Badges & Local Verification Chips
+- **ISO / Garware Certification Badges:** Compact dual-layer chips with micro-labeling (`GARWARE VERIFIED`, `316 STAINLESS STEEL`), structured with a subtle metallic or sky-cyan micro-dot to indicate authenticated specs.
+- **Bengaluru Society Proof Badges:** Micro-pills highlighting verified installs across landmark localities (e.g., `Prestige Falcon City`, `Sobha Dream Acres`, `Brigade Gateway`).
+
+### Service & Comparison Cards
+- Built using Level 1 elevation with an 8px radius. Features high-contrast spec breakdown tables (e.g., Wire Thickness, Tensile Strength, Gap Spacing, Rust Resistance) followed by instant single-tap quote buttons.
+
+### Reviews & Google Rating Cards
+- Google-verified rating blocks showcase star rating matrices (`5.0 ★★★★★`), reviewer locality, and verified neighborhood tags with micro-timestamps.
+
+### Input Fields & Estimation Calculators
+- Precision numeric inputs with integrated square footage (`sq.ft`) suffix markers. Flat border transition to `#38BDF8` sky-cyan outline on `:focus-visible` with zero fuzzy drop shadow.
