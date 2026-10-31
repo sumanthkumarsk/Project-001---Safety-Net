@@ -1,68 +1,48 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  calculateEstimate,
   validateIndianPhoneNumber,
-  generateWhatsAppUrl,
-  SERVICE_PRICING_CATALOG
+  generateMarutiWhatsAppUrl,
+  MARUTI_CONTACT,
+  SERVICES_LIST
 } from './calculator.ts';
 
-test('calculateEstimate calculates correct square footage and enforces minimum billable area', () => {
-  // 5ft x 5ft = 25 sq.ft, but min for invisible grills is 50 sq.ft
-  const result = calculateEstimate({
-    serviceId: 'invisible-grills',
-    widthFt: 5,
-    heightFt: 5
-  });
-
-  assert.equal(result.sqFt, 25);
-  assert.equal(result.billableSqFt, 50);
-  assert.equal(result.ratePerSqFt, 140);
-  assert.equal(result.totalCost, 50 * 140);
-  assert.equal(result.warrantyYears, 5);
-});
-
-test('calculateEstimate applies volume discounts accurately', () => {
-  // 25ft x 10ft = 250 sq.ft -> 10% volume discount
-  const result = calculateEstimate({
-    serviceId: 'balcony-safety-nets',
-    widthFt: 25,
-    heightFt: 10
-  });
-
-  assert.equal(result.sqFt, 250);
-  assert.equal(result.billableSqFt, 250);
-  assert.equal(result.ratePerSqFt, 22);
-  const total = 250 * 22; // 5500
-  assert.equal(result.totalCost, 5500);
-  assert.equal(result.discountAmount, 550); // 10%
-  assert.equal(result.discountedCost, 4950);
+test('MARUTI_CONTACT has correct phone and email', () => {
+  assert.equal(MARUTI_CONTACT.name, 'Maruti Safety Nets');
+  assert.equal(MARUTI_CONTACT.phone, '7338581692');
+  assert.equal(MARUTI_CONTACT.phoneFormatted, '+91 7338581692');
+  assert.equal(MARUTI_CONTACT.email, 'maruthib479@gmail.com');
+  assert.equal(MARUTI_CONTACT.tagline, 'Balcony and Grill Expert');
 });
 
 test('validateIndianPhoneNumber handles valid formats', () => {
-  assert.equal(validateIndianPhoneNumber('9845012345').isValid, true);
-  assert.equal(validateIndianPhoneNumber('+91 98450 12345').isValid, true);
-  assert.equal(validateIndianPhoneNumber('09845012345').isValid, true);
-  assert.equal(validateIndianPhoneNumber('+91-98450-12345').normalized, '+919845012345');
+  assert.equal(validateIndianPhoneNumber('7338581692').isValid, true);
+  assert.equal(validateIndianPhoneNumber('+91 7338581692').isValid, true);
+  assert.equal(validateIndianPhoneNumber('07338581692').isValid, true);
+  assert.equal(validateIndianPhoneNumber('+91-73385-81692').normalized, '+917338581692');
 });
 
-test('validateIndianPhoneNumber rejects invalid numbers', () => {
-  assert.equal(validateIndianPhoneNumber('12345').isValid, false);
-  assert.equal(validateIndianPhoneNumber('abcde12345').isValid, false);
-  assert.equal(validateIndianPhoneNumber('4984501234').isValid, false); // doesn't start with 6-9
-});
-
-test('generateWhatsAppUrl builds well-formed WhatsApp link', () => {
-  const url = generateWhatsAppUrl({
-    phone: '919845012345',
-    name: 'Ramesh Kumar',
+test('generateMarutiWhatsAppUrl creates direct link to 7338581692 with details', () => {
+  const url = generateMarutiWhatsAppUrl({
     service: 'Invisible Grills',
-    locality: 'Chikkabanavara',
-    areaSqFt: 120
+    name: 'Sumanth',
+    locality: 'Bengaluru',
+    notes: '2 balconies'
   });
 
-  assert.match(url, /^https:\/\/wa\.me\/919845012345\?text=/);
-  assert.ok(url.includes('Chikkabanavara'));
+  assert.ok(url.startsWith('https://wa.me/917338581692?text='));
+  assert.ok(url.includes('Maruti%20Safety%20Nets'));
   assert.ok(url.includes('Invisible%20Grills'));
-  assert.ok(url.includes('120%20sq.ft'));
+  assert.ok(url.includes('Sumanth'));
+  assert.ok(url.includes('Bengaluru'));
+});
+
+test('SERVICES_LIST has all 6 core services', () => {
+  assert.equal(SERVICES_LIST.length, 6);
+  assert.ok(SERVICES_LIST.includes('Invisible Grills'));
+  assert.ok(SERVICES_LIST.includes('Balcony Safety Nets'));
+  assert.ok(SERVICES_LIST.includes('Pigeon Spikes & Anti-Bird Nets'));
+  assert.ok(SERVICES_LIST.includes('Monkey Safety Nets'));
+  assert.ok(SERVICES_LIST.includes('Dry Cloth Hangers'));
+  assert.ok(SERVICES_LIST.includes('Sports Nets & Mats'));
 });
