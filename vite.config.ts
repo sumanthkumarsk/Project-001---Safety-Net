@@ -5,6 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    base: process.env.GITHUB_ACTIONS ? '/Project-001---Safety-Net/' : '/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
